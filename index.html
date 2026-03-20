@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///Users/dangthien/Downloads/citics-partner-forum-invite.html -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citics Partner Forum — Thư Mời</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #0741DA;
+    --blue-dark: #052fa0;
+    --blue-light: #e8eefb;
+    --blue-mid: #3a64e0;
+    --ink: #0f1623;
+    --ink-soft: #3d4a5c;
+    --ink-muted: #7b8a9e;
+    --line: #dce3ef;
+    --white: #ffffff;
+    --cream: #f8f9fc;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e0e6f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 48px rgba(7,65,218,0.12), 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--blue);
+    height: 6px;
+    width: 100%;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 36px 56px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .logo-wrap svg {
+    height: 38px;
+    width: auto;
+  }
+
+  .header-tag {
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .header-tag .label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .header-tag .doc-id {
+    font-size: 10px;
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    margin: 28px 56px 0;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 44px 56px 0;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .hero-title span {
+    color: var(--blue);
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
+    margin-bottom: 32px;
+  }
+
+  /* ── EVENT INFO STRIP ── */
+  .event-strip {
+    margin: 0 56px;
+    background: var(--blue);
+    border-radius: 10px;
+    padding: 20px 28px;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .event-item {
+    flex: 1;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .event-item:first-child { padding-left: 0; }
+  .event-item:last-child { border-right: none; }
+
+  .event-item .ei-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .event-item .ei-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .event-item .ei-value.placeholder {
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+  }
+
+  /* ── BODY ── */
+  .body-wrap {
+    padding: 36px 56px 0;
+  }
+
+  .greeting {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.7;
+  }
+
+  .intro-text {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+
+  .intro-text strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ── AGENDA ITEMS ── */
+  .agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .agenda-item {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .agenda-item:last-child {
+    border-bottom: none;
+  }
+
+  .agenda-num {
+    width: 44px;
+    min-height: 70px;
+    background: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--blue);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .agenda-content {
+    padding: 16px 20px;
+    flex: 1;
+  }
+
+  .agenda-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+
+  .agenda-desc {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  /* ── ROLES ── */
+  .roles-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .role-card {
+    flex: 1;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.2s;
+  }
+
+  .role-card.featured {
+    border-color: var(--blue);
+    background: var(--blue-light);
+  }
+
+  .role-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+  }
+
+  .role-card.featured .role-icon {
+    background: var(--blue);
+  }
+
+  .role-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .role-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .role-desc {
+    font-size: 11px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    margin: 0 56px 0;
+    background: var(--cream);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+  }
+
+  .cta-text {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.75;
+  }
+
+  .cta-text strong {
+    font-weight: 600;
+  }
+
+  /* ── REGISTER ── */
+  .register-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 56px 32px;
+    padding: 18px 22px;
+    border: 1.5px solid var(--blue);
+    border-radius: 8px;
+    background: white;
+  }
+
+  .register-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    flex-shrink: 0;
+  }
+
+  .register-val {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    flex: 1;
+  }
+
+  /* ── FOOTER ── */
+  .footer-divider {
+    margin: 0 56px;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .footer {
+    padding: 22px 56px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .sig-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .sig-closing {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .sig-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-size: 11px;
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  .sig-org {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 1px;
+  }
+
+  .footer-brand {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .footer-brand .fb-shape {
+    opacity: 0.08;
+  }
+
+  .confidential {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+
+  /* ── DECORATIVE BG SHAPE ── */
+  .bg-shape {
+    position: absolute;
+    top: -60px;
+    right: -80px;
+    width: 340px;
+    height: 340px;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero { position: relative; z-index: 1; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 100%; min-height: 100vh; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- BG DECORATIVE SHAPE -->
+  <svg class="bg-shape" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#0741DA" d="M58.4068743,1.87493253 C61.3543111,3.58709711 62.6228286,4.32397806 63.7773568,4.99464302 L63.9307557,5.08375242 C64.0072552,5.12819072 64.0835567,5.17251432 64.1601246,5.21699255 L64.3137525,5.30623496 C65.0079122,5.7094719 65.7486719,6.13977887 66.8740569,6.79351444 C69.8161276,8.50256158 70.826555,12.2918884 69.1309102,15.2572127 C67.4352653,18.2225371 63.6756538,19.240951 60.7335835,17.5319038 C59.3997938,16.7571061 58.6062733,16.2961505 57.7891426,15.8214772 L57.6355162,15.7322352 C57.6098196,15.7173081 57.5840658,15.7023476 57.5582374,15.6873437 L57.4022323,15.5967198 C56.3019954,14.9575884 55.0093093,14.2066585 52.2492496,12.6033216 C51.7757194,12.3261955 51.2119113,12.3261955 50.7212302,12.6133219 L15.0001362,33.3636488 C13.3223198,34.3455649 12.2970305,36.137778 12.2970305,38.0747622 L12.2970305,92.1833014 C12.2970305,95.1902349 14.693628,97.6057749 17.6769814,97.6057749 L85.3106493,97.6057749 C88.2940027,97.6057749 90.6906002,95.1902349 90.6906002,92.1833014 L90.69,49.589 L58.5421665,81.8858769 C57.4335449,83.0009459 55.9988416,83.5906153 54.5460721,83.6561297 L54.2735413,83.6622716 C52.7288527,83.6622716 51.1843128,83.0691448 50.0064023,81.8858769 L28.6677346,60.4501576 C26.3104275,58.0821291 26.3104275,54.2435999 28.6677346,51.8755713 C31.0250418,49.5075428 34.8461918,49.5075428 37.2034989,51.8755713 L54.2751761,69.0247439 L92.6853722,30.4383592 C95.0426794,28.0718235 98.8654641,28.0703306 101.21965,30.4383592 C102.514112,31.7386264 103.09775,33.4828499 102.970563,35.1832053 C103.002884,35.6835922 103.008644,36.2153049 102.987631,36.7781168 L102.987631,92.1833014 C102.987631,102.035376 95.0854651,110 85.3106493,110 L17.6769814,110 C7.90216559,110 0,102.035376 0,92.1833014 L0,38.0747622 C0,31.7174951 3.36035538,25.8435695 8.84251159,22.6352596 L44.5636055,1.88493276 C48.8551747,-0.626641721 54.1324561,-0.626641721 58.4068743,1.87493253 Z"></path>
+  </svg>
+
+  <div class="top-bar"></div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-wrap">
+      <svg width="338" height="110" viewBox="0 0 338 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <lineargradient x1="76.5%" y1="43.7%" x2="91.1%" y2="43.7%" id="lg1">
+            <stop stop-color="#0741DA" offset="0%"></stop>
+            <stop stop-color="#0741DA" offset="100%"></stop>
+          </lineargradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <g transform="translate(123,24.9968)" fill="#0741DA" fill-rule="nonzero">
+            <path d="M29.481384,63.9324511 C23.806698,63.9324511 18.7465058,62.6387378 14.3008073,60.0513112 C9.85510882,57.4638846 6.36021632,53.7810614 3.81612979,49.0028416 C1.27204326,44.2246218 0,38.559606 0,32.0077941 C0,25.4005575 1.26878968,19.7041487 3.80636904,14.9185678 C6.34394839,10.1329869 9.83884089,6.45016373 14.2910465,3.87009824 C18.7432522,1.29003275 23.806698,0 29.481384,0 C33.1193258,0 36.4924257,0.537360288 39.6006839,1.61208086 C42.708942,2.68680144 45.4619087,4.22418879 47.8595839,6.22424292 C50.2572591,8.22429704 52.224485,10.6250981 53.7612617,13.4266461 C55.2980383,16.2281941 56.3128314,19.3625071 56.8056411,22.8295851 L43.8583251,22.8295851 C43.4934898,21.0035994 42.8933119,19.3748478 42.0577912,17.9433304 C41.2222706,16.5118129 40.1920772,15.301778 38.9672109,14.3132256 C37.7423446,13.3246732 36.3461229,12.5741658 34.7785456,12.0617033 C33.2109684,11.5492409 31.5051138,11.2930097 29.6609819,11.2930097 C26.1414706,11.2930097 23.1327721,12.1397526 20.6348865,13.8332386 C18.1370009,15.5267246 16.2222661,17.9217883 14.8906822,21.0184298 C13.5590984,24.1150713 12.8933064,27.7781927 12.8933064,32.0077941 C12.8933064,36.2096831 13.555411,39.8520202 14.8796201,42.9348056 C16.2038291,46.0175909 18.1185639,48.4057265 20.6238243,50.0992125 C23.1290847,51.7926984 26.1414706,52.6394414 29.6609819,52.6394414 C31.5051138,52.6394414 33.2040274,52.386999 34.7577227,51.8821142 C36.3114179,51.3772293 37.7006987,50.6299694 38.925565,49.6403345 C40.1504313,48.6506996 41.1837699,47.4469432 42.0255807,46.0290655 C42.8673916,44.6111878 43.4845967,42.9968336 43.8771959,41.1860031 L56.8056411,41.1860031 C56.3102286,44.6400909 55.2947847,47.7642283 53.7593095,50.5584152 C52.2238343,53.3526021 50.2534633,55.7465833 47.8481964,57.7403589 C45.4429295,59.7341344 42.6899628,61.2645937 39.5892963,62.3317366 C36.4886299,63.3988796 33.1193258,63.9324511 29.481384,63.9324511 Z"></path>
+            <path d="M62.0883254,62.9348056 L62.0883254,19.0384022 L74.3738622,19.0384022 L74.3738622,62.9348056 L62.0883254,62.9348056 Z M68.2102708,13.5097832 C66.1835043,13.5097832 64.5037868,12.8931829 63.1711184,11.6599821 C61.8384501,10.4267814 61.1721159,8.86796027 61.1721159,6.98351871 C61.1721159,5.09907716 61.8384501,3.54025601 63.1711184,2.30705529 C64.5037868,1.07385456 66.1696223,0.457254202 68.1686249,0.457254202 C70.1953915,0.457254202 71.8751089,1.07385456 73.2077773,2.30705529 C74.5404457,3.54025601 75.2067799,5.09907716 75.2067799,6.98351871 C75.2067799,8.86796027 74.5404457,10.4267814 73.2077773,11.6599821 C71.8751089,12.8931829 70.2092734,13.5097832 68.2102708,13.5097832 Z"></path>
+            <path d="M107.358105,19.0384022 L107.358105,28.6537306 L78.4994572,28.6537306 L78.4994572,19.0384022 L107.358105,19.0384022 Z M86.103736,7.06665584 L98.3560862,7.06665584 L98.3560862,49.3750101 C98.3560862,50.8563232 98.6575851,51.8840627 99.2605828,52.4582285 C99.8635806,53.0323943 100.992358,53.3194771 102.646914,53.3194771 C103.345784,53.3194771 104.175448,53.3194771 105.135907,53.3194771 C106.096365,53.3194771 106.837098,53.3194771 107.358105,53.3194771 L107.358105,62.9348056 C106.62106,62.9348056 105.586094,62.9348056 104.253209,62.9348056 C102.920324,62.9348056 101.57822,62.9348056 100.226898,62.9348056 C95.3712474,62.9348056 91.8034746,61.9906362 89.5235791,60.1022976 C87.2436837,58.213959 86.103736,55.2766637 86.103736,51.2904116 L86.103736,7.06665584 Z"></path>
+            <path d="M111.995898,62.9348056 L111.995898,19.0384022 L124.281435,19.0384022 L124.281435,62.9348056 L111.995898,62.9348056 Z M118.117844,13.5097832 C116.091077,13.5097832 114.41136,12.8931829 113.078691,11.6599821 C111.746023,10.4267814 111.079689,8.86796027 111.079689,6.98351871 C111.079689,5.09907716 111.746023,3.54025601 113.078691,2.30705529 C114.41136,1.07385456 116.077195,0.457254202 118.076198,0.457254202 C120.102964,0.457254202 121.782682,1.07385456 123.11535,2.30705529 C124.448019,3.54025601 125.114353,5.09907716 125.114353,6.98351871 C125.114353,8.86796027 124.448019,10.4267814 123.11535,11.6599821 C121.782682,12.8931829 120.116846,13.5097832 118.117844,13.5097832 Z"></path>
+            <path d="M151.546257,63.9324511 C147.147844,63.9324511 143.291044,62.966848 139.975858,61.0356418 C136.660672,59.1044356 134.081772,56.4168764 132.239158,52.9729642 C130.396545,49.529052 129.475238,45.5463722 129.475238,41.0249249 C129.475238,36.4904874 130.396545,32.495034 132.239158,29.0385646 C134.081772,25.5820952 136.660672,22.8850099 139.975858,20.9473086 C143.291044,19.0096073 147.147844,18.0407567 151.546257,18.0407567 C154.434573,18.0407567 157.098174,18.4667262 159.537062,19.3186653 C161.975949,20.1706043 164.104878,21.3721956 165.923849,22.9234391 C167.74282,24.4746827 169.195979,26.3096533 170.283327,28.4283511 C171.370675,30.5470488 172.01456,32.8870125 172.214981,35.4482423 L160.329635,35.4482423 C160.169558,34.325025 159.862854,33.3052962 159.409521,32.3890558 C158.956188,31.4728154 158.362951,30.6834456 157.62981,30.0209467 C156.896669,29.3584477 156.037722,28.8466347 155.052971,28.4855078 C154.068219,28.1243809 152.95918,27.9438175 151.725855,27.9438175 C149.666986,27.9438175 147.899856,28.4763065 146.424463,29.5412844 C144.949071,30.6062623 143.818776,32.1164786 143.033577,34.0719331 C142.248379,36.0273876 141.855779,38.3450516 141.855779,41.0249249 C141.855779,43.6770859 142.248379,45.9781873 143.033577,47.9282293 C143.818776,49.8782712 144.949613,51.3826419 146.42609,52.4413412 C147.902567,53.5000406 149.669155,54.0293903 151.725855,54.0293903 C152.95918,54.0293903 154.061929,53.8514249 155.0341,53.495494 C156.006271,53.1395632 156.846021,52.6303483 157.553351,51.9678493 C158.26068,51.3053503 158.841011,50.505372 159.294344,49.5679143 C159.747677,48.6304566 160.073469,47.5862629 160.271721,46.4353333 L172.214981,46.4353333 C172.074426,48.9710157 171.471753,51.3018863 170.406963,53.4279451 C169.342174,55.554004 167.893352,57.403372 166.060499,58.9760494 C164.227646,60.5487267 162.080606,61.767963 159.619377,62.6337582 C157.158149,63.4995535 154.467109,63.9324511 151.546257,63.9324511 Z"></path>
+            <path d="M195.476538,64 C191.679821,64 188.298154,63.4161998 185.331535,62.2485995 C182.364916,61.0809992 179.989148,59.3875132 178.204232,57.1681416 C176.419315,54.94877 175.39975,52.2755 175.145536,49.1483316 L187.224145,49.1483316 C187.444088,51.0500934 188.244903,52.5403913 189.626592,53.6192255 C191.008281,54.6980596 192.887769,55.2374767 195.265055,55.2374767 C197.554711,55.2374767 199.34863,54.8057698 200.64681,53.9423561 C201.94499,53.0789424 202.594081,51.9691483 202.594081,50.6129739 C202.594081,49.4590133 202.09574,48.5253444 201.099058,47.8119672 C200.102377,47.09859 198.700841,46.565235 196.89445,46.2119022 L189.184756,44.7284241 C184.923861,43.8931558 181.685351,42.3989608 179.469226,40.2458391 C177.2531,38.0927174 176.145038,35.3252686 176.145038,31.9434927 C176.145038,29.1653271 176.900737,26.7384374 178.412136,24.6628237 C179.923534,22.5872101 182.074913,20.975887 184.866272,19.8288544 C187.657631,18.6818219 190.959261,18.1083056 194.771161,18.1083056 C198.574819,18.1083056 201.893692,18.7132148 204.727782,19.9230332 C207.561871,21.1328516 209.780057,22.8432248 211.382339,25.0541528 C212.984621,27.2650808 213.827408,29.9003545 213.9107,32.959974 L202.544626,32.959974 C202.516862,31.2006712 201.817341,29.7385186 200.446064,28.5735163 C199.074786,27.408514 197.303101,26.8260128 195.131007,26.8260128 C193.022684,26.8260128 191.365742,27.2714676 190.16018,28.1623772 C188.954619,29.0532868 188.351838,30.1491164 188.351838,31.449866 C188.351838,32.5891045 188.823933,33.5222321 189.768123,34.249249 C190.712314,34.9762659 192.022099,35.5144922 193.697478,35.8639279 L202.036416,37.4818543 C206.481681,38.3595573 209.753594,39.7741874 211.852157,41.7257449 C213.950719,43.6773024 215,46.2701415 215,49.5042624 C215,52.4296501 214.174349,54.9782144 212.523046,57.1499553 C210.871743,59.3216963 208.577206,61.0063056 205.639436,62.2037834 C202.701666,63.4012611 199.314033,64 195.476538,64 Z"></path>
+          </g>
+          <g transform="translate(0,-0.0032)" fill="#0741DA" fill-rule="nonzero">
+            <path d="M58.4068743,1.87493253 C61.3543111,3.58709711 62.6228286,4.32397806 63.7773568,4.99464302 L63.9307557,5.08375242 C64.0072552,5.12819072 64.0835567,5.17251432 64.1601246,5.21699255 L64.3137525,5.30623496 C65.0079122,5.7094719 65.7486719,6.13977887 66.8740569,6.79351444 C69.8161276,8.50256158 70.826555,12.2918884 69.1309102,15.2572127 C67.4352653,18.2225371 63.6756538,19.240951 60.7335835,17.5319038 C59.3997938,16.7571061 58.6062733,16.2961505 57.7891426,15.8214772 L57.6355162,15.7322352 C57.6098196,15.7173081 57.5840658,15.7023476 57.5582374,15.6873437 L57.4022323,15.5967198 C56.3019954,14.9575884 55.0093093,14.2066585 52.2492496,12.6033216 C51.7757194,12.3261955 51.2119113,12.3261955 50.7212302,12.6133219 L15.0001362,33.3636488 C13.3223198,34.3455649 12.2970305,36.137778 12.2970305,38.0747622 L12.2970305,92.1833014 C12.2970305,95.1902349 14.693628,97.6057749 17.6769814,97.6057749 L85.3106493,97.6057749 C88.2940027,97.6057749 90.6906002,95.1902349 90.6906002,92.1833014 L90.69,49.589 L58.5421665,81.8858769 C57.4335449,83.0009459 55.9988416,83.5906153 54.5460721,83.6561297 L54.2735413,83.6622716 C52.7288527,83.6622716 51.1843128,83.0691448 50.0064023,81.8858769 L28.6677346,60.4501576 C26.3104275,58.0821291 26.3104275,54.2435999 28.6677346,51.8755713 C31.0250418,49.5075428 34.8461918,49.5075428 37.2034989,51.8755713 L54.2751761,69.0247439 L92.6853722,30.4383592 C95.0426794,28.0718235 98.8654641,28.0703306 101.21965,30.4383592 C102.514112,31.7386264 103.09775,33.4828499 102.970563,35.1832053 C103.002884,35.6835922 103.008644,36.2153049 102.987631,36.7781168 L102.987631,92.1833014 C102.987631,102.035376 95.0854651,110 85.3106493,110 L17.6769814,110 C7.90216559,110 0,102.035376 0,92.1833014 L0,38.0747622 C0,31.7174951 3.36035538,25.8435695 8.84251159,22.6352596 L44.5636055,1.88493276 C48.8551747,-0.626641721 54.1324561,-0.626641721 58.4068743,1.87493253 Z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="header-tag">
+      <span class="label">Thư mời chính thức</span>
+      <span class="doc-id">CACN — 2025</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Citics Agent Cooperation Network</div>
+    <div class="hero-title">Citics<br><span>Partner Forum</span></div>
+    <div class="hero-tagline">Mô hình mới &nbsp;·&nbsp; Định hướng rõ &nbsp;·&nbsp; Cơ hội hợp tác dài hạn</div>
+  </div>
+
+  <!-- EVENT STRIP -->
+  <div class="event-strip">
+    <div class="event-item">
+      <span class="ei-label">Thời gian</span>
+      <span class="ei-value placeholder">[ Ngày / Giờ ]</span>
+    </div>
+    <div class="event-item">
+      <span class="ei-label">Địa điểm</span>
+      <span class="ei-value placeholder">[ Địa điểm tổ chức ]</span>
+    </div>
+    <div class="event-item">
+      <span class="ei-label">Hình thức</span>
+      <span class="ei-value placeholder">[ Trực tiếp / Online ]</span>
+    </div>
+    <div class="event-item">
+      <span class="ei-label">Đăng ký</span>
+      <span class="ei-value placeholder">[ Link / QR ]</span>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-wrap">
+
+    <p class="greeting">Kính gửi Quý Anh/Chị,</p>
+
+    <p class="intro-text">
+      Thay mặt Ban lãnh đạo <strong>CACN — Citics Agent Cooperation Network</strong>, chúng tôi trân trọng kính mời Quý Anh/Chị tham dự <strong>Citics Partner Forum</strong> — buổi chia sẻ chính thức về mô hình vận hành mới của Citics Group và định hướng hợp tác dành cho đối tác chiến lược. Đây là dịp để Citics giới thiệu trực tiếp cấu trúc hệ thống, quy trình hợp tác và những cơ hội cụ thể mà chúng tôi dành cho các đối tác có năng lực và định hướng phù hợp.
+    </p>
+
+    <div class="section-label">Nội dung chương trình</div>
+
+    <div class="agenda">
+      <div class="agenda-item">
+        <div class="agenda-num">01</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Chia sẻ mô hình &amp; định hướng của Citics</div>
+          <div class="agenda-desc">Tổng quan cấu trúc vận hành mới — từ Citics Group đến BU, CACN, Store và Agent. Vai trò từng cấp, cơ chế phối hợp và định hướng phát triển mạng lưới trong giai đoạn tới.</div>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-num">02</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Giới thiệu quy trình hợp tác cùng CACN</div>
+          <div class="agenda-desc">Các hình thức tham gia dành cho đối tác bên ngoài. Quy trình onboarding, tiêu chuẩn vận hành và cách thức CACN đồng hành xuyên suốt quá trình triển khai.</div>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-num">03</div>
+        <div class="agenda-content">
+          <div class="agenda-title">Quyền lợi &amp; cơ hội dành cho đối tác</div>
+          <div class="agenda-desc">Hệ thống hỗ trợ từ Citics: đào tạo, chứng nhận, công cụ vận hành, dữ liệu thị trường. Lộ trình phát triển dài hạn và cơ hội ứng tuyển vị trí Store Lead cho các Store Internal.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Hình thức tham gia</div>
+
+    <div class="roles-row">
+      <div class="role-card">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <div class="role-name">Store Partner</div>
+        <div class="role-desc">Đối tác bên ngoài vận hành Store độc lập trong hệ sinh thái Citics, theo tiêu chuẩn và quy trình của CACN.</div>
+      </div>
+      <div class="role-card featured">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+        </div>
+        <div class="role-name">Store Ảo</div>
+        <div class="role-desc">Hình thức hợp tác linh hoạt, phù hợp với đối tác đang vận hành team sale hoặc mạng lưới sẵn có.</div>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div class="role-name">Store Lead</div>
+        <div class="role-desc">Vị trí lãnh đạo vận hành cho các Store Internal — dành cho cá nhân có năng lực xây dựng và dẫn dắt đội nhóm.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <p class="cta-text">
+      Chúng tôi trân trọng mời Quý Anh/Chị dành thời gian tham dự. Đây là cơ hội tiếp cận thông tin trực tiếp từ đội ngũ lãnh đạo CACN, đặt câu hỏi và đánh giá mức độ phù hợp trước khi đưa ra quyết định hợp tác. <strong>Chương trình được tổ chức theo hình thức chia sẻ mở, không ràng buộc.</strong>
+    </p>
+  </div>
+
+  <!-- REGISTER -->
+  <div class="register-row">
+    <span class="register-label">Xác nhận &amp; Đăng ký</span>
+    <span class="register-val">[ Điền link đăng ký / thông tin liên hệ xác nhận tham dự ]</span>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-divider"></div>
+  <div class="footer">
+    <div class="sig-block">
+      <div class="sig-closing">Trân trọng,</div>
+      <div class="sig-name">[ Họ và Tên ]</div>
+      <div class="sig-role">Head of CACN — Citics Agent Cooperation Network</div>
+      <div class="sig-org">Citics Group</div>
+    </div>
+    <div class="footer-brand">
+      <svg width="28" height="28" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" class="fb-shape">
+        <path fill="#0741DA" d="M58.4068743,1.87493253 C61.3543111,3.58709711 62.6228286,4.32397806 63.7773568,4.99464302 L63.9307557,5.08375242 C64.0072552,5.12819072 64.0835567,5.17251432 64.1601246,5.21699255 L64.3137525,5.30623496 C65.0079122,5.7094719 65.7486719,6.13977887 66.8740569,6.79351444 C69.8161276,8.50256158 70.826555,12.2918884 69.1309102,15.2572127 C67.4352653,18.2225371 63.6756538,19.240951 60.7335835,17.5319038 C59.3997938,16.7571061 58.6062733,16.2961505 57.7891426,15.8214772 L57.6355162,15.7322352 C57.6098196,15.7173081 57.5840658,15.7023476 57.5582374,15.6873437 L57.4022323,15.5967198 C56.3019954,14.9575884 55.0093093,14.2066585 52.2492496,12.6033216 C51.7757194,12.3261955 51.2119113,12.3261955 50.7212302,12.6133219 L15.0001362,33.3636488 C13.3223198,34.3455649 12.2970305,36.137778 12.2970305,38.0747622 L12.2970305,92.1833014 C12.2970305,95.1902349 14.693628,97.6057749 17.6769814,97.6057749 L85.3106493,97.6057749 C88.2940027,97.6057749 90.6906002,95.1902349 90.6906002,92.1833014 L90.69,49.589 L58.5421665,81.8858769 C57.4335449,83.0009459 55.9988416,83.5906153 54.5460721,83.6561297 L54.2735413,83.6622716 C52.7288527,83.6622716 51.1843128,83.0691448 50.0064023,81.8858769 L28.6677346,60.4501576 C26.3104275,58.0821291 26.3104275,54.2435999 28.6677346,51.8755713 C31.0250418,49.5075428 34.8461918,49.5075428 37.2034989,51.8755713 L54.2751761,69.0247439 L92.6853722,30.4383592 C95.0426794,28.0718235 98.8654641,28.0703306 101.21965,30.4383592 C102.514112,31.7386264 103.09775,33.4828499 102.970563,35.1832053 C103.002884,35.6835922 103.008644,36.2153049 102.987631,36.7781168 L102.987631,92.1833014 C102.987631,102.035376 95.0854651,110 85.3106493,110 L17.6769814,110 C7.90216559,110 0,102.035376 0,92.1833014 L0,38.0747622 C0,31.7174951 3.36035538,25.8435695 8.84251159,22.6352596 L44.5636055,1.88493276 C48.8551747,-0.626641721 54.1324561,-0.626641721 58.4068743,1.87493253 Z"></path>
+      </svg>
+      <span class="confidential">Citics Group · CACN · 2025</span>
+    </div>
+  </div>
+
+</div>
+
+
+</body></html>
